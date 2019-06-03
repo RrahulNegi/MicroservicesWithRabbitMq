@@ -1,0 +1,10 @@
+package com.employee_managment;
+
+public class EmployeeManagmentApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

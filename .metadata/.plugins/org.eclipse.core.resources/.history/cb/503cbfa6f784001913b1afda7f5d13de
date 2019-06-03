@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="employee-managment">
+        <property name="context-root" value="employee-managment"/>
+        <property name="java-output-path" value="/employee-managment/target/classes"/>
+    </wb-module>
+</project-modules>

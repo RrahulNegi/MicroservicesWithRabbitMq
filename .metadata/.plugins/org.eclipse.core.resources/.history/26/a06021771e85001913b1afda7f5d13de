@@ -1,0 +1,5 @@
+package com.mail.sender.application.controller.mail;
+
+public class Email {
+
+}

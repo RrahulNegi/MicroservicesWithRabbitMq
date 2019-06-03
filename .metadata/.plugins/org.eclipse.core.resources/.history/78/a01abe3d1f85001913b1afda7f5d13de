@@ -1,0 +1,10 @@
+package com.mail.sender.application.service;
+
+public class MailServiceImpl implements MailService {
+
+	public void sendMail(MailDataBean mailDataBean) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

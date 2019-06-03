@@ -1,0 +1,36 @@
+package com.mail.sender.application.controller.mail;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.mail.sender.application.bean.EmployeeBean;
+
+@Component
+public class SubscriberService {
+	@Autowired
+	EmailService mailService;
+	@RabbitListener(queues="${jsa.rabbitmq.queue}")
+    public void receivedMessage(EmployeeBean employee) {
+        System.out.println("Received Message: " + employee.getName());
+        String from;
+		List<String> to;
+		List<String> cc;
+		String subject;
+		String message;
+		boolean isHtml;
+		String imagePath;
+		from="Rahul Singh Negi";
+		to= new ArrayList<String>();
+		to.add(employee.getEmail());
+		subject= "User is registerd successfully";
+		message= "<p>"+employee.getName()+"</p> is added successfully";
+		Email mailDataBean = new Email(from, to, cc, subject, message, isHtml, imagePath)
+        mailService.sendMail(mailDataBean);
+        
+    }
+}
+

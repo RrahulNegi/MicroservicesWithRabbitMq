@@ -1,0 +1,15 @@
+package com.mail.sender.application.controller.mail;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+import com.mail.sender.application.bean.EmployeeBean;
+
+@Component
+public class SubscriberService {
+	@RabbitListener(queues="${jsa.rabbitmq.queue}")
+    public void receivedMessage(EmployeeBean msg) {
+        System.out.println("Received Message: " + msg.getName());
+    }
+}
+

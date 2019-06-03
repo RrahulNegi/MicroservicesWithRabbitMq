@@ -1,0 +1,7 @@
+F:\MICROSERVICE\micro-service-mq\employee-managment\src\main\java\com\employee_managment\RabbitConfig.java
+F:\MICROSERVICE\micro-service-mq\employee-managment\src\main\java\com\employee_managment\EmployeeManagmentApplication.java
+F:\MICROSERVICE\micro-service-mq\employee-managment\src\main\java\com\employee_managment\bean\EmployeeBean.java
+F:\MICROSERVICE\micro-service-mq\employee-managment\src\main\java\com\employee_managment\repository\EmployeeRepository.java
+F:\MICROSERVICE\micro-service-mq\employee-managment\src\main\java\com\employee_managment\entity\Employee.java
+F:\MICROSERVICE\micro-service-mq\employee-managment\src\main\java\com\employee_managment\controller\EmployeeController.java
+F:\MICROSERVICE\micro-service-mq\employee-managment\src\main\java\com\employee_managment\service\RabbitMqSender.java

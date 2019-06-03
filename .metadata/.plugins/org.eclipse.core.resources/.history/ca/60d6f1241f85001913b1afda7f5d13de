@@ -1,0 +1,5 @@
+package com.mail.sender.application.service;
+
+public class MailServiceImpl implements MailService {
+
+}

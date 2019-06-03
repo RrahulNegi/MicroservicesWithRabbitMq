@@ -1,0 +1,38 @@
+package com.mail.sender.application.service;
+
+import com.mail.sender.application.controller.mail.Email;
+
+public class MailServiceImpl implements MailService {
+
+	@Autowired
+	MailDao mailDao;
+	
+	@Autowired
+	EmailService emailService;
+	
+	
+	
+	 
+	 
+	public  void sendMail(MailDataBean mail) {
+		 
+		 
+		 		String from = mail.getFrom() ;
+		 		String to = mail.getTo();
+		 		String subject = mail.getSubject();
+		 		String mailBody=mail.getMailBody();
+		 		String imagePath=mail.getImagePath();
+		 		
+		 		System.out.println("Frm :"+from+" to :"+to+" subject : "+subject+" body :"+mailBody);
+		 		
+		 
+		 	Email email = new Email(from, to, subject, mailBody, imagePath);
+		 		email.setHtml(true);
+		 		try {
+					emailService.mailSend(email);
+				} catch (MessagingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		 	}
+}

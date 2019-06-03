@@ -1,0 +1,6 @@
+package com.mail.sender.application.service;
+
+public interface MailService {
+	void sendMail(MailDataBean mailDataBean);
+
+}

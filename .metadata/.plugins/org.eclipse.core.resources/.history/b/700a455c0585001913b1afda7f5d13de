@@ -1,0 +1,28 @@
+package com.employee_managment.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employee_managment.bean.EmpploeeBean;
+import com.employee_managment.entity.Employee;
+import com.employee_managment.repository.EmployeeRepository;
+
+@RestController
+public class EmployeeController {
+	@Autowired
+	EmployeeRepository employeeRepository;
+	@PostMapping(value="/saveEmployee")
+	public String employeeSave(@RequestBody EmpploeeBean employee){
+		System.out.println("employee=="+employee.getName());
+		Employee employeeEntity= new Employee();
+		employeeRepository.save(employeeEntity);
+		return "employee save successfully";
+	}
+	@GetMapping(value="/getEmployee")
+	public String getEmployee(){
+		return "employee get suceesfully";
+	}
+}

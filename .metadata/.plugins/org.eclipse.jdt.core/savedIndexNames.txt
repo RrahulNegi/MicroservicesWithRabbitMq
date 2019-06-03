@@ -1,0 +1,6 @@
+INDEX VERSION 1.127+F:\MICROSERVICE\micro-service-mq\.metadata\.plugins\org.eclipse.jdt.core
+2847366799.index
+3148725243.index
+3505214632.index
+1717163389.index
+1359608976.index
